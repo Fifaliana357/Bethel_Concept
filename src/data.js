@@ -2,11 +2,11 @@
 // puis renseignez `img: '/images/realisations/nom-du-fichier.jpg'` sur le projet voulu.
 
 export const NAV = [
-  { to: '/', label: 'Accueil', end: true },
-  { to: '/a-propos', label: 'À propos' },
-  { to: '/services', label: 'Services' },
-  { to: '/realisations', label: 'Réalisations' },
-  { to: '/contact', label: 'Contact' },
+  { id: 'accueil', to: '/', label: 'Accueil' },
+  { id: 'a-propos', to: '/#a-propos', label: 'À propos' },
+  { id: 'services', to: '/#services', label: 'Services' },
+  { id: 'realisations', to: '/#realisations', label: 'Réalisations' },
+  { id: 'contact', to: '/#contact', label: 'Contact' },
 ];
 
 export const SERVICES = [

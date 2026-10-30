@@ -47,13 +47,6 @@ export default function Services() {
       ))}
 
       <div className="gap" />
-
-      <section className="wrap cta-wrap">
-        <Reveal className="cta">
-          <h2>Un projet précis ? Décrivez-le-nous.</h2>
-          <Link className="btn btn-light" to="/contact">Nous contacter</Link>
-        </Reveal>
-      </section>
     </>
   );
 }

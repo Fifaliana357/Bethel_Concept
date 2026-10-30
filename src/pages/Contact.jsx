@@ -14,12 +14,12 @@ export default function Contact() {
     <section className="wrap contact-section">
       <div className="contact-box">
         <Reveal className="contact-info">
-          <span className="eyebrow light">Contact</span>
+          <span className="eyebrow">Contact</span>
           <h1>Envie de déco pour votre maison ?</h1>
           <p className="lead">Décrivez-nous votre projet : nous vous répondons rapidement avec un devis gratuit.</p>
           <div className="contact-actions">
-            <a className="btn btn-light" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">WhatsApp : {SITE.phoneDisplay}</a>
-            <a className="btn btn-outline-light" href={TEL_URL}>Appeler maintenant</a>
+            <a className="btn btn-primary" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">WhatsApp : {SITE.phoneDisplay}</a>
+            <a className="btn btn-outline" href={TEL_URL}>Appeler maintenant</a>
           </div>
           <div className="contact-lines">
             <Maybe value={SITE.email} />

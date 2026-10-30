@@ -1,13 +1,15 @@
 import { useEffect, useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import useActiveSection from './useActiveSection.js';
 import { NAV } from '../data.js';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const { pathname } = useLocation();
+  const { key } = useLocation();
+  const active = useActiveSection();
 
-  useEffect(() => setOpen(false), [pathname]);
+  useEffect(() => setOpen(false), [key]);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -34,17 +36,17 @@ export default function Header() {
     <header className={`site-header${scrolled ? ' scrolled' : ''}`}>
       <div className="wrap bar">
         <Link className="brand" to="/" aria-label="Bethel Concept — accueil">
-          <img src="/images/logo-icon.png" alt="" width="45" height="48" />
-          <img src="/images/logo-wordmark.png" alt="Bethel Concept" width="138" height="48" />
+          <img src="/images/logo-icon-green.png" alt="" width="45" height="48" />
+          <img src="/images/logo-wordmark-green.png" alt="Bethel Concept" width="138" height="48" />
         </Link>
 
         <nav className="nav" aria-label="Navigation principale">
           {NAV.map((n) => (
-            <NavLink key={n.to} to={n.to} end={n.end}>{n.label}</NavLink>
+            <Link key={n.id} to={n.to} aria-current={active === n.id ? 'page' : undefined}>{n.label}</Link>
           ))}
         </nav>
 
-        <Link className="btn btn-light header-cta" to="/contact">Demander un devis</Link>
+        <Link className="btn btn-primary header-cta" to="/#contact">Demander un devis</Link>
 
         <button
           className="burger"
@@ -65,10 +67,10 @@ export default function Header() {
       <div className={`mpanel${open ? ' open' : ''}`} id="mpanel">
         <nav aria-label="Menu mobile">
           {NAV.map((n) => (
-            <NavLink key={n.to} to={n.to} end={n.end} tabIndex={open ? 0 : -1}>{n.label}</NavLink>
+            <Link key={n.id} to={n.to} aria-current={active === n.id ? 'page' : undefined} tabIndex={open ? 0 : -1}>{n.label}</Link>
           ))}
         </nav>
-        <Link className="btn btn-light" to="/contact" tabIndex={open ? 0 : -1}>Demander un devis</Link>
+        <Link className="btn btn-primary" to="/#contact" tabIndex={open ? 0 : -1}>Demander un devis</Link>
       </div>
     </header>
   );

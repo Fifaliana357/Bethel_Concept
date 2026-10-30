@@ -34,7 +34,7 @@ export default function About() {
         </Reveal>
       </section>
 
-      <section className="section section-dark on-dark">
+      <section className="section section-sage">
         <div className="wrap">
           <Reveal className="section-head">
             <span className="eyebrow">Nos engagements</span>
@@ -49,7 +49,7 @@ export default function About() {
               </Reveal>
             ))}
           </div>
-          <p className="note" style={{ color: 'var(--on-dark)' }}>
+          <p className="note">
             <Maybe value="[À CONFIRMER avec l’entreprise : engagements réels à afficher]" />
           </p>
         </div>
@@ -71,13 +71,6 @@ export default function About() {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="wrap cta-wrap">
-        <Reveal className="cta cta-sand">
-          <h2>Un projet en tête ? Parlons-en.</h2>
-          <Link className="btn btn-primary" to="/contact">Nous contacter</Link>
-        </Reveal>
       </section>
     </>
   );

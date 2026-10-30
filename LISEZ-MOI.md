@@ -20,7 +20,9 @@ npm run preview    # teste le site compilé en local
 | Téléphone, WhatsApp, email, adresse, horaires, Facebook | `src/config.js` |
 | Services, projets de la galerie, étapes, engagements, équipe | `src/data.js` |
 | Couleurs et design | `src/styles.css` (variables en haut, section `:root`) |
-| Texte d'une page | `src/pages/` (Home, About, Services, Gallery, Contact) |
+| Texte d'une section de l'accueil | `src/sections/` (Hero, About, Services, Showcase, Contact) |
+| Page « toutes les réalisations » | `src/pages/Gallery.jsx` |
+| Ordre et libellés du menu | `NAV` dans `src/data.js` |
 | Menu et pied de page | `src/components/Header.jsx` et `Footer.jsx` (une seule fois pour tout le site) |
 
 Toute valeur qui commence par `[` (par exemple `[VOTRE EMAIL]`) est provisoire : elle s'affiche en pointillés sur le site. Remplacez-la par la vraie valeur et les pointillés disparaissent.
@@ -61,7 +63,7 @@ Tant que la clé n'est pas renseignée, le formulaire affiche un message de dém
 3. Réglages : commande de build `npm run build`, dossier de sortie `dist`.
 4. Dans les variables du projet, ajoutez `VITE_WEB3FORMS_KEY` avec votre clé. Si le build échoue pour une question de version, ajoutez `NODE_VERSION` = `22`.
 
-Le fichier `public/_redirects` fait que les liens directs (`/services`, `/contact`…) fonctionnent aussi après rechargement de la page.
+Le site est une seule page à sections (Accueil, À propos, Services, Réalisations, Contact) ; le menu suit la section affichée. Seule la galerie complète a sa propre page (`/realisations`). Le fichier `public/_redirects` fait que les liens directs (`/realisations`…) fonctionnent aussi après rechargement de la page.
 
 ## Bon à savoir
 

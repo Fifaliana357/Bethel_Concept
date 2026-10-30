@@ -23,6 +23,7 @@ export default function Gallery() {
   return (
     <>
       <section className="wrap page-intro">
+        <Link className="back" to="/#realisations">← Retour à l’accueil</Link>
         <Reveal as="span" className="eyebrow">Nos réalisations</Reveal>
         <Reveal as="h1" delay={80}>Du plâtre à la lumière, nos projets en images.</Reveal>
         <Reveal delay={160} className="filters" role="group" aria-label="Filtrer les réalisations">
@@ -56,13 +57,6 @@ export default function Gallery() {
           ))}
         </div>
         <p className="note">Les cadres colorés seront remplacés par les vraies photos de chantiers.</p>
-      </section>
-
-      <section className="wrap cta-wrap">
-        <Reveal className="cta">
-          <h2>Le prochain projet, c’est le vôtre.</h2>
-          <Link className="btn btn-light" to="/contact">Demander un devis</Link>
-        </Reveal>
       </section>
 
       {active !== null && (
