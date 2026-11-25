@@ -42,6 +42,58 @@ export default function Services() {
         </section>
       ))}
 
+      <section className="section section-paper video-services" aria-labelledby="video-services-title">
+        <div className="wrap">
+          <Reveal className="section-head wide">
+            <span className="eyebrow">Pistes à valider</span>
+            <h2 id="video-services-title">D’autres pôles évoqués dans la vidéo</h2>
+            <p className="lead">
+              Ces activités et leur disponibilité sont à confirmer avec l’entreprise avant de les présenter comme des services proposés.
+            </p>
+          </Reveal>
+
+          <div className="video-pillars">
+            <Reveal className="video-pillar">
+              <h3>Bâtiment &amp; rénovation</h3>
+              <ul>
+                <li>Plans, calculs, permis</li>
+                <li>Carrelage, aménagement intérieur</li>
+              </ul>
+            </Reveal>
+            <Reveal delay={100} className="video-pillar">
+              <h3>Solutions techniques</h3>
+              <ul>
+                <li>Électricité, plomberie</li>
+                <li>Automatisation</li>
+              </ul>
+            </Reveal>
+            <Reveal delay={200} className="video-pillar">
+              <h3>Agence immobilière</h3>
+              <ul>
+                <li>Achat, vente, location</li>
+                <li>Gestion immobilière</li>
+              </ul>
+            </Reveal>
+          </div>
+
+          <Reveal className="property-brand">
+            <span className="eyebrow">Nom à confirmer</span>
+            <h3>Bethel <strong>Immobilier</strong></h3>
+            <p>Achat <i /> Vente <i /> Location <i /> Gestion</p>
+          </Reveal>
+
+          <Reveal className="video-commitments">
+            <span className="eyebrow">Valeurs citées dans la vidéo · à confirmer</span>
+            <ul>
+              <li>Qualité</li>
+              <li>Confiance</li>
+              <li>Respect des délais</li>
+              <li>Satisfaction</li>
+            </ul>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="section section-sand steps-section">
         <div className="wrap">
           <Reveal className="section-head">

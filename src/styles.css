@@ -194,6 +194,25 @@ p{margin:0}
 .service-text p{font-size:18px;line-height:1.7;color:var(--muted-2)}
 @media (max-width:800px){.service.rev{flex-direction:row}}
 
+/* Pistes d’activités relevées dans la vidéo, en attente de confirmation */
+.video-services .section-head{margin-bottom:32px}
+.video-pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.video-pillar{padding:26px 24px;background:var(--cream);border:1px solid var(--sage-line);border-radius:16px}
+.video-pillar h3{font-size:27px;line-height:1.1;color:var(--green-dark);margin-bottom:16px}
+.video-pillar ul,.video-commitments ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;color:var(--muted-2)}
+.video-pillar li::before{content:"— ";color:var(--green)}
+.property-brand{margin-top:24px;padding:24px;background:var(--green-dark);border:1px solid var(--line);border-radius:16px;color:var(--on-dark);text-align:center}
+.property-brand .eyebrow{color:var(--gold)}
+.property-brand h3{font-size:clamp(30px,4vw,42px);line-height:1.1;margin-top:8px}
+.property-brand h3 strong{color:var(--gold);font-weight:600}
+.property-brand p{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px;margin-top:10px;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+.property-brand p i{width:4px;height:4px;border-radius:50%;background:var(--gold)}
+.video-commitments{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;margin-top:20px}
+.video-commitments .eyebrow{color:var(--muted)}
+.video-commitments ul{flex-direction:row;flex-wrap:wrap;gap:8px}
+.video-commitments li{padding:6px 12px;border-radius:999px;background:var(--sage);font-size:14px}
+@media (max-width:600px){.video-commitments{align-items:flex-start;flex-direction:column}}
+
 /* ---------- Contact ---------- */
 .contact-box{background:var(--sage);color:var(--text);border:1px solid var(--sage-line);border-radius:28px;padding:clamp(28px,5vw,64px);display:flex;flex-wrap:wrap;gap:clamp(32px,5vw,56px)}
 .contact-info{flex:1 1 340px;min-width:0;display:flex;flex-direction:column;gap:20px}
