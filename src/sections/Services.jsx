@@ -41,6 +41,7 @@ export default function Services() {
 
           <div className="business-pillars">
             <Reveal className="business-pillar">
+              <span className="pillar-number">01</span>
               <h3>Bâtiment &amp; rénovation</h3>
               <ul>
                 <li>Plans, calculs, permis</li>
@@ -48,6 +49,7 @@ export default function Services() {
               </ul>
             </Reveal>
             <Reveal delay={100} className="business-pillar">
+              <span className="pillar-number">02</span>
               <h3>Solutions techniques</h3>
               <ul>
                 <li>Électricité, plomberie</li>
@@ -55,6 +57,7 @@ export default function Services() {
               </ul>
             </Reveal>
             <Reveal delay={200} className="business-pillar">
+              <span className="pillar-number">03</span>
               <h3>Agence immobilière</h3>
               <ul>
                 <li>Achat, vente, location</li>
@@ -65,16 +68,6 @@ export default function Services() {
           <Reveal className="property-brand">
             <h3>Bethel <strong>Immobilier</strong></h3>
             <p>Achat <i /> Vente <i /> Location <i /> Gestion</p>
-          </Reveal>
-
-          <Reveal className="business-commitments">
-            <span className="eyebrow">Nos engagements</span>
-            <ul>
-              <li>Qualité</li>
-              <li>Confiance</li>
-              <li>Respect des délais</li>
-              <li>Satisfaction</li>
-            </ul>
           </Reveal>
         </div>
       </section>
