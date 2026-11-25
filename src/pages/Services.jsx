@@ -3,32 +3,20 @@ import { usePageMeta } from '../hooks.js';
 import { SERVICES } from '../data.js';
 import Reveal from '../components/Reveal.jsx';
 import Photo from '../components/Photo.jsx';
-import Maybe from '../components/Maybe.jsx';
-
-// Affiche un texte en pointillés si c'est un « [À CONFIRMER] » au début.
-function Text({ children }) {
-  const m = /^(\[[^\]]+\])\s*(.*)$/.exec(children);
-  if (!m) return children;
-  return (
-    <>
-      <Maybe value={m[1]} /> {m[2]}
-    </>
-  );
-}
 
 export default function Services() {
   usePageMeta(
     'Services — Bethel Concept',
-    'Faux plafonds, murs décoratifs, éclairage LED, meubles TV sur mesure, sols et finitions : les services de décoration intérieure de Bethel Concept.'
+    'Bâtiment et rénovation, solutions techniques, aménagement intérieur et services immobiliers par Bethel Concept.'
   );
 
   return (
     <>
       <section className="wrap page-intro">
         <Reveal as="span" className="eyebrow">Nos services</Reveal>
-        <Reveal as="h1" delay={80}>Chaque pièce mérite un décor à sa mesure.</Reveal>
-        <Reveal delay={160}>
-          <Maybe as="p" className="lead" value="[À CONFIRMER avec l’entreprise : liste définitive des prestations proposées]" />
+        <Reveal as="h1" delay={80}>Des solutions pour vos projets, de la conception à la réalisation.</Reveal>
+        <Reveal as="p" delay={160} className="lead">
+          Bethel Concept vous accompagne dans vos travaux, vos installations techniques et vos projets immobiliers.
         </Reveal>
       </section>
 
@@ -40,7 +28,7 @@ export default function Services() {
           <Reveal delay={120} className="service-text">
             <span className="num">{String(i + 1).padStart(2, '0')}</span>
             <h2>{s.title}</h2>
-            <p><Text>{s.long}</Text></p>
+            <p>{s.long}</p>
             <Link className="btn btn-primary" to="/contact">Demander un devis</Link>
           </Reveal>
         </section>

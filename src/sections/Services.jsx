@@ -2,18 +2,6 @@ import { Link } from 'react-router-dom';
 import { SERVICES, STEPS } from '../data.js';
 import Reveal from '../components/Reveal.jsx';
 import Photo from '../components/Photo.jsx';
-import Maybe from '../components/Maybe.jsx';
-
-// Affiche un texte en pointillés si c'est un « [À CONFIRMER] » au début.
-function Text({ children }) {
-  const m = /^(\[[^\]]+\])\s*(.*)$/.exec(children);
-  if (!m) return children;
-  return (
-    <>
-      <Maybe value={m[1]} /> {m[2]}
-    </>
-  );
-}
 
 export default function Services() {
   return (
@@ -22,8 +10,10 @@ export default function Services() {
         <div className="wrap">
           <Reveal className="section-head wide">
             <span className="eyebrow">Nos services</span>
-            <h2>Chaque pièce mérite un décor à sa mesure.</h2>
-            <Maybe as="p" className="lead" value="[À CONFIRMER avec l’entreprise : liste définitive des prestations proposées]" />
+            <h2>Des solutions pour vos projets, de la conception à la réalisation.</h2>
+            <p className="lead">
+              Bethel Concept vous accompagne dans vos travaux, vos installations techniques et vos projets immobiliers.
+            </p>
           </Reveal>
         </div>
       </section>
@@ -36,38 +26,35 @@ export default function Services() {
           <Reveal delay={120} className="service-text">
             <span className="num">{String(i + 1).padStart(2, '0')}</span>
             <h3>{s.title}</h3>
-            <p><Text>{s.long}</Text></p>
+            <p>{s.long}</p>
             <Link className="btn btn-primary" to="/#contact">Demander un devis</Link>
           </Reveal>
         </section>
       ))}
 
-      <section className="section section-paper video-services" aria-labelledby="video-services-title">
+      <section className="section section-paper business-offerings" aria-labelledby="business-offerings-title">
         <div className="wrap">
           <Reveal className="section-head wide">
-            <span className="eyebrow">Pistes à valider</span>
-            <h2 id="video-services-title">D’autres pôles évoqués dans la vidéo</h2>
-            <p className="lead">
-              Ces activités et leur disponibilité sont à confirmer avec l’entreprise avant de les présenter comme des services proposés.
-            </p>
+            <span className="eyebrow">Nos expertises</span>
+            <h2 id="business-offerings-title">Un accompagnement complet pour vos projets</h2>
           </Reveal>
 
-          <div className="video-pillars">
-            <Reveal className="video-pillar">
+          <div className="business-pillars">
+            <Reveal className="business-pillar">
               <h3>Bâtiment &amp; rénovation</h3>
               <ul>
                 <li>Plans, calculs, permis</li>
                 <li>Carrelage, aménagement intérieur</li>
               </ul>
             </Reveal>
-            <Reveal delay={100} className="video-pillar">
+            <Reveal delay={100} className="business-pillar">
               <h3>Solutions techniques</h3>
               <ul>
                 <li>Électricité, plomberie</li>
                 <li>Automatisation</li>
               </ul>
             </Reveal>
-            <Reveal delay={200} className="video-pillar">
+            <Reveal delay={200} className="business-pillar">
               <h3>Agence immobilière</h3>
               <ul>
                 <li>Achat, vente, location</li>
@@ -75,15 +62,13 @@ export default function Services() {
               </ul>
             </Reveal>
           </div>
-
           <Reveal className="property-brand">
-            <span className="eyebrow">Nom à confirmer</span>
             <h3>Bethel <strong>Immobilier</strong></h3>
             <p>Achat <i /> Vente <i /> Location <i /> Gestion</p>
           </Reveal>
 
-          <Reveal className="video-commitments">
-            <span className="eyebrow">Valeurs citées dans la vidéo · à confirmer</span>
+          <Reveal className="business-commitments">
+            <span className="eyebrow">Nos engagements</span>
             <ul>
               <li>Qualité</li>
               <li>Confiance</li>

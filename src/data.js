@@ -45,8 +45,8 @@ export const SERVICES = [
     id: 'sols',
     icon: 'sol',
     title: 'Sols & finitions',
-    short: '[À CONFIRMER] Pose de sols et finitions intérieures.',
-    long: '[À CONFIRMER] Pose de sols, peinture et finitions intérieures pour un résultat complet.',
+    short: 'Revêtements de sol et finitions soignées pour harmoniser vos espaces.',
+    long: 'Revêtements de sol et finitions intérieures pour compléter vos travaux et harmoniser vos espaces.',
     tone: 'sand',
     photo: 'Sol et finitions',
     img: null,
@@ -80,15 +80,10 @@ export const STEPS = [
 ];
 
 export const VALUES = [
-  { title: 'Sur mesure', text: 'Chaque projet est conçu selon vos envies, votre espace et votre budget.' },
-  { title: 'Finitions soignées', text: 'Une attention particulière aux détails, du premier trait à la dernière retouche.' },
-  { title: 'Écoute & clarté', text: 'Un devis clair et un suivi régulier pour savoir où en est votre chantier.' },
-];
-
-export const TEAM = [
-  { id: 't1', tone: 'sand', name: '[NOM Prénom]', role: '[Rôle : fondateur, chef d’équipe…]', img: null },
-  { id: 't2', tone: 'gold', name: '[NOM Prénom]', role: '[Rôle]', img: null },
-  { id: 't3', tone: 'blue', name: '[NOM Prénom]', role: '[Rôle]', img: null },
+  { title: 'Qualité', text: 'Un travail soigné et une attention portée aux détails à chaque étape.' },
+  { title: 'Confiance', text: 'Une relation fondée sur l’écoute, le dialogue et la transparence.' },
+  { title: 'Respect des délais', text: 'Une organisation attentive au calendrier défini pour votre projet.' },
+  { title: 'Satisfaction', text: 'Un accompagnement attentif, de votre première demande à la réalisation.' },
 ];
 
 export const RIBBON = ['Faux plafonds', 'Murs décoratifs', 'Éclairage LED', 'Meubles TV sur mesure', 'Finitions soignées'];
