@@ -8,10 +8,10 @@ export const SITE = {
   phoneIntl: '+261381221269',
   whatsappNumber: '261381221269',
   whatsappText: 'Bonjour Bethel Concept, je souhaite un devis pour mon projet de décoration.',
-  email: '[VOTRE EMAIL]',
-  address: '[VOTRE ADRESSE]',
-  hours: '[HORAIRES D’OUVERTURE]',
-  facebook: '[PAGE FACEBOOK]',
+  email: 'arimanantsoamih@gmail.com',
+  address: 'Alasora',
+  hours: 'De 07h à 17h',
+  facebook: 'https://www.facebook.com/profile.php?id=100075828014789',
 };
 
 export const WHATSAPP_URL = `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(SITE.whatsappText)}`;
